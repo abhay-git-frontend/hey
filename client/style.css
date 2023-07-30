@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
+
+:root {
+	--primary-color:#e43d4e;
+	--accent-color:#e43d4e;
+	--secondary-color:#0a0d1b;	
+	--fore-color: #ffffff;
+	--bg-color: #13182a;
+	
+    --username-font: 'Righteous', cursive;
+    --chat-font: 'Poppins', sans-serif;
+    --ui-font:'Ubuntu', sans-serif;
+    --decorative-font: 'Shantell Sans', cursive;
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ui-font);
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: var(--secondary-color);
+}
+
+nav > .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+}
+
+.logo > img {
+    width: 100%;
+}
+
+nav > h3 {
+    display: flex;
+    text-align: center;
+    font-family: var(--decorative-font);
+    font-size: 25px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fore-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80svh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    width: 100%;
+    color: var(--fore-color);
+}
+.message p {
+    padding: 0.8rem;
+    border-radius: 10px;
+    word-wrap: break-word;
+    max-width: 70%;
+    font-size: 15px;
+    vertical-align: middle;
+    font-family: var(--chat-font);
+    font-weight: 500;
+}
+.left{
+    text-align: left;
+    justify-content: flex-start;
+}
+.left > p{
+    background-color: var(--secondary-color);
+}
+
+.right {
+    text-align: right;
+    justify-content: flex-end;
+}
+.right > p{
+    background-color: var(--primary-color);
+}
+
+.mid {
+    justify-content: center;
+}
+.mid p {
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--secondary-color);
+    min-width: 80%;
+    padding: 0.16rem;
+}
+
+.send-container {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--bg-color);
+}
+
+#send {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5px;
+    width: 100%;
+    padding:10px 0 ;
+}
+
+#send > #messageInput {
+    width: 90%;
+    padding: 0.8rem;
+    border: 2px solid var(--bg-color);
+    outline: none;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--fore-color);
+    font-size: 17px;
+    vertical-align: middle;
+    transition: 0.2s ease-in;
+}
+#send > #messageInput:hover {
+    filter: brightness(115%);
+}
+#send > #messageInput:focus {
+    border: 2px solid var(--accent-color);
+}
+
+#send > button {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid var(--bg-color);
+    outline: none;     
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+#send > button:hover {
+    filter: brightness(115%);
+}
+#send > button:active {
+    filter: brightness(140%);
+    border-color:var(--accent-color) ;
+}
+
+.icon {
+    width: 100%;
+    fill: var(--accent-color);
+}
+
+.username {
+    /* font-weight: bold; */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-family: var(--username-font);
+}
